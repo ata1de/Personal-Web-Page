@@ -89,7 +89,8 @@ body{
     justify-content: center;
     align-items: center;
     background: radial-gradient(white #c7c7c7) */
-    background-color: rgb(255, 255, 255);
+    background-color:  #f3f4f6;
+    /* background-color:  #111827; */
     display: flex;
     align-items: center;
     gap: 32px;
@@ -118,10 +119,38 @@ body{
     animation: written 0.5s ease forwards;
 }
 
-#text_resume p{
+#social-icons{
+    display: flex;
+    padding: 20px 0;
+    font-size: 24px;
+    
+}
+
+#social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    color: #2c2c2c;
+    transition: background 0.2s;
+    border-radius: 50%;
+}
+#social-icons a:hover{
+    background: #b4b1b1;
+}
+
+
+.paragrafo_header{
     line-height: 150%;
     margin: 25px 0;
     max-width: 580px;
+}
+
+.paragrafo{
+    line-height: 150%;
+    margin: 25px 0;
+    max-width: 580px;
+    color: whitesmoke;
 }
 
 #text_resume h1:nth-child(1){
@@ -135,6 +164,109 @@ body{
 #text_resume h1:nth-child(3){
     animation-delay: 3s;
 }
+
+#sobre{
+    background-color: #2c2c2c;
+    padding: 50px 80px;
+
+}
+
+#habilities{
+    background-color: #2c2c2c;
+}
+
+.subtitle{
+    font-size: 2.5rem;
+    position: relative;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.subtitle_black{
+    font-size: 2.5rem;
+    position: relative;
+    color: #2c2c2c ;
+    text-align: center;
+}
+
+.subtitle:after{
+    content: '';
+    display: block;
+    width: 50%;
+    height: 0.3rem;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+    background-color: #C42727
+}
+
+/* .subtitle_black:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0.3rem;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+    background-color: #C42727
+} */
+.text_sobre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image_sobre img{
+    width: 500px;
+    margin-right: 15px;
+}
+
+.image_sobre{
+    display: flex;
+}
+
+.sobre_content{
+    display: flex;
+}
+
+#habilities{
+    background-color: #f3f4f6;
+    justify-content: center;
+    padding: 60px 80px;
+    text-align: center;
+}
+
+
+.icon_container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.button_portifolio{
+    width: 150px;
+    padding: 12px 24px;
+    border-radius: 20px;
+    border: none;
+    margin: 1.5rem;
+    font-weight: 600;
+    color: #C42727;
+    text-decoration: none;
+    border: 2px solid #C42727;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.button_portifolio:hover{
+    border: 2px solid #2c2c2c;
+    color: #2c2c2c;
+}
+
+.img_habilities img{
+    width: 200px;
+}
+
 @keyframes written{
     100%{
         color: #2c2c2c;
