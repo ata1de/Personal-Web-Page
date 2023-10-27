@@ -9,6 +9,7 @@ body{
     font-family: 'Lato', sans-serif
 }
 
+/* HEADER */
 #nav_container{
     background-color: #2c2c2c;
     padding: 1rem;
@@ -84,6 +85,7 @@ body{
     width: 100%;
 }
 
+/* SECTION DE INÍCIO */
 #inicio{
     /* display: flex;
     justify-content: center;
@@ -94,7 +96,7 @@ body{
     display: flex;
     align-items: center;
     gap: 32px;
-    padding: 100px 80px;
+        padding-block: 80px;
     position: relative;
     justify-content: center;
 }
@@ -178,33 +180,35 @@ body{
     animation-delay: 3s;
 }
 
+/* SECTION DE SOBRE */
 #sobre{
     background-color: #2c2c2c;
     padding: 50px 80px;
     display: flex;
     justify-content: center;
-
 }
 
-#habilities{
-    background-color: #2c2c2c;
+.sobre_content{
+    display: flex;
 }
 
 .subtitle{
     font-size: 2.5rem;
     position: relative;
     color: whitesmoke;
-    text-align: center;
+    margin: auto;
+    width: fit-content;
 }
 
 .subtitle_black{
     font-size: 2.5rem;
     position: relative;
     color: #2c2c2c ;
-    text-align: center;
+    width: fit-content;
+    margin: auto;
 }
 
-.subtitle:after{
+.subtitle:after, .subtitle_black:after{
     content: '';
     display: block;
     width: 50%;
@@ -240,10 +244,23 @@ body{
     display: flex;
 }
 
-.sobre_content{
-    display: flex;
+
+
+/* SECTION DO SOBRE 2  */
+/* #sobre_2{
+    background-color: #2c2c2c;
 }
 
+.sobre_content_2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: auto;
+    padding: 80px 64px;
+} */
+
+/* SECTION DE HABILIDADES */
 #habilities{
     background-color: #f3f4f6;
     justify-content: center;
@@ -255,6 +272,7 @@ body{
 .icon_container{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 1rem;
     margin-top: 3rem;
 }
@@ -284,7 +302,9 @@ body{
 
 .img_habilities img:hover{
     /* box-shadow: 2px 5px 2px 0px rgba(0, 0, 0, 0.2); */
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1)
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    transform: scale(1.03);
+    transition: all 200ms;
 }
 
 footer{
@@ -294,9 +314,12 @@ footer{
     padding: 0.7rem;
 }
 
-@media screen  and (max-width: 1000px){
-    .image_sobre img {
-        width: 300px;
+@media screen  and (max-width: 1200px){
+    .image_sobre{
+        display: none;
+    }
+    .sobre_content_2{
+        justify-content: center;
     }
 }
 
@@ -304,7 +327,20 @@ footer{
     .image_sobre img {
         width: 200px;
     }
+
+    #inicio_content {
+        flex-direction: column;
+    }
+
+    #text_resume{
+        padding-inline: 32px;
+    }
+
+    #text_resume h1 {
+        font-size: 40px;
+    }
 }
+
 @keyframes written{
     100%{
         color: #2c2c2c;
