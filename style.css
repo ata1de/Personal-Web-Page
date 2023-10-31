@@ -3,6 +3,45 @@
     margin: 0;
     box-sizing: border-box;
 }
+:root{
+    --text-color1 : rgb(255,255,255);
+    --text-color2 : #2c2c2c;
+    --background1 : #2c2c2c;
+    --background2 : #f3f4f6;
+    --color-third: #C42727;
+    --subtitle: whitesmoke;
+
+}
+
+.light{
+    --text-color1 : #66757F;;
+    --text-color2 : #2c2c2c;
+    --background1 : #E6ECF0;
+    --background2 : #657786;;
+    --color-third: #021F33;
+}
+
+/* Color Theme Swatches in Hex */
+.Twitter-Grays-Light-Mode-1-hex { color: #14171A; }
+.Twitter-Grays-Light-Mode-2-hex { color: #66757F; }
+.Twitter-Grays-Light-Mode-3-hex { color: #657786; }
+.Twitter-Grays-Light-Mode-4-hex { color: #E6ECF0; }
+.Twitter-Grays-Light-Mode-5-hex { color: #FFFFFF; }
+
+/* Color Theme Swatches in RGBA */
+.Twitter-Grays-Light-Mode-1-rgba { color: rgba(20, 23, 26, 1); }
+.Twitter-Grays-Light-Mode-2-rgba { color: rgba(102, 117, 126, 1); }
+.Twitter-Grays-Light-Mode-3-rgba { color: rgba(100, 119, 133, 1); }
+.Twitter-Grays-Light-Mode-4-rgba { color: rgba(230, 235, 239, 1); }
+.Twitter-Grays-Light-Mode-5-rgba { color: rgba(255, 255, 255, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Twitter-Grays-Light-Mode-1-hsla { color: hsla(210, 13, 9, 1); }
+.Twitter-Grays-Light-Mode-2-hsla { color: hsla(203, 10, 44, 1); }
+.Twitter-Grays-Light-Mode-3-hsla { color: hsla(207, 14, 46, 1); }
+.Twitter-Grays-Light-Mode-4-hsla { color: hsla(203, 24, 92, 1); }
+.Twitter-Grays-Light-Mode-5-hsla { color: hsla(0, 0, 100, 1); }
+
 
 html{
     scroll-behavior: smooth;
@@ -15,13 +54,13 @@ body{
 
 /* HEADER */
 #nav_container{
-    background-color: #2c2c2c;
+    background-color: var( --background1);
     padding: 1rem;
     top: 0;
     position: sticky;
-    box-shadow: 8px 1px 8px black ;
-    /* z-index: 999; */
-    position: relative;
+    /* box-shadow: 8px 1px 8px black ; */
+    z-index: 999;
+    /* position: relative; */
 }
 
 .header_content{
@@ -69,7 +108,7 @@ body{
 }
 
 .nav_bar li{
-    color: white;
+    color: var( --text-color1 );
     font-size: 17px;
     margin: 0.6rem;
 }
@@ -81,12 +120,18 @@ body{
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #C42727;
+    background-color: var( --color-third);
     transition: 0.3s;
 }
 
 .nav_bar a:hover::after {
     width: 100%;
+}
+
+.theme img{
+    color:var( --text-color1) ;
+    cursor: pointer;
+    width: 40px;
 }
 
 /* SECTION DE INÍCIO */
@@ -95,7 +140,7 @@ body{
     justify-content: center;
     align-items: center;
     background: radial-gradient(white #c7c7c7) */
-    background-color:  #f3f4f6;
+    background-color: var( --background2);
     /* background-color:  #111827; */
     display: flex;
     align-items: center;
@@ -113,8 +158,8 @@ body{
 #img_pessoal img{
     width: 300px;
     border-radius: 99999px;
-    border: 1px solid #C42727;
-    border-color: #C42727;
+    border: 1px solid var( --color-third);
+    border-color: var( --color-third);
 }
 
 #text_resume h1{
@@ -138,7 +183,7 @@ body{
     align-items: center;
     justify-content: center;
     padding: 16px;
-    color: #2c2c2c;
+    color: var( --text-color2 );
     /* transition: background 0.2s; */
     border-radius: 50%;
     position: relative;
@@ -147,7 +192,7 @@ body{
     content: '';
     width: 0;
     left: 0;
-    background-color: #C42727;
+    background-color: var( --color-third);
     position: absolute;
     bottom: -5px;
     height: 2px;
@@ -169,7 +214,7 @@ body{
     line-height: 150%;
     margin: 25px 0;
     max-width: 580px;
-    color: whitesmoke;
+    color: var( --subtitle );
 }
 
 #text_resume h1:nth-child(1){
@@ -186,7 +231,7 @@ body{
 
 /* SECTION DE SOBRE */
 #sobre{
-    background-color: #2c2c2c;
+    background-color: var( --background1);
     padding: 50px 80px;
     display: flex;
     justify-content: center;
@@ -199,7 +244,7 @@ body{
 .subtitle{
     font-size: 2.5rem;
     position: relative;
-    color: whitesmoke;
+    color: var( --subtitle );
     margin: auto;
     width: fit-content;
 }
@@ -207,7 +252,7 @@ body{
 .subtitle_black{
     font-size: 2.5rem;
     position: relative;
-    color: #2c2c2c ;
+    color: var( --text-color2 );
     width: fit-content;
     margin: auto;
 }
@@ -220,7 +265,7 @@ body{
     margin: 0 auto;
     position: absolute;
     border-radius: 10px;
-    background-color: #C42727
+    background-color:var( --color-third)
 }
 
 /* .subtitle_black:after{
@@ -266,7 +311,7 @@ body{
 
 /* SECTION DE HABILIDADES */
 #habilities{
-    background-color: #f3f4f6;
+    background-color:var( --background2);
     justify-content: center;
     padding: 60px 80px;
     text-align: center;
@@ -288,16 +333,16 @@ body{
     border: none;
     margin: 1.5rem;
     font-weight: 600;
-    color: #C42727;
+    color: var( --color-third);
     text-decoration: none;
-    border: 2px solid #C42727;
+    border: 2px solid var( --color-third);
     cursor: pointer;
     transition: .5s ease;
 }
 
 .button_portifolio:hover{
-    border: 2px solid #2c2c2c;
-    color: #2c2c2c;
+    border: 2px solid var( --text-color2 );
+    color: var( --text-color2 );
 }
 
 .img_habilities img{
@@ -312,8 +357,8 @@ body{
 }
 
 footer{
-    background-color: #2c2c2c;
-    color: #f3f4f6;
+    background-color: var( --background1);
+    color: var( --text-color1 );
     text-align: center;
     padding: 0.7rem;
 }
@@ -347,6 +392,6 @@ footer{
 
 @keyframes written{
     100%{
-        color: #2c2c2c;
+        color: var( --text-color2 );
     }
 }
