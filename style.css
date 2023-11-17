@@ -4,13 +4,14 @@
     box-sizing: border-box;
 }
 :root{
-    --text-color1 : rgb(255,255,255);
+    --text-color1 : #EDE6E6;
     --text-color2 : #2c2c2c;
-    --background1 : #2c2c2c;
-    --background2 : #f3f4f6;
-    --color-third: #C42727;
+    --background1 : #180606;
+    --background2 : #450100;
+    --color-third: #D82929;
     --subtitle: whitesmoke;
-
+    
+    
 }
 
 .light{
@@ -53,8 +54,8 @@ body{
 }
 
 /* HEADER */
-#nav_container{
-    background-color: var( --background1);
+.nav_container{
+    background-color: var( --background2);
     padding: 1rem;
     top: 0;
     position: sticky;
@@ -72,12 +73,8 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-.menu img{
-    cursor: pointer;
-    width: 30px;
-}
 
-.menu{
+.img_theme{
     display: none;
 }
 
@@ -85,26 +82,23 @@ body{
     /* font-size: 25px; */
     width: 90px;
 }
-/* 
-.logo h1{
-    color:#C42727
-}
-
-.logo span{
-    color: white;
-} */
 
 .nav_bar{
     display: flex;
     list-style: none;
     padding: 1rem;
+    margin-left: auto;
     /* gap: 0.8rem; */
 }
+
+/* .show-menu nav{
+    display: block;
+} */
 
 .nav_bar a{
     text-decoration: none;
     position: relative;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
 }
 
 .nav_bar li{
@@ -128,12 +122,22 @@ body{
     width: 100%;
 }
 
-.theme img{
+.menu{
+    display: flex;
+    gap: 2rem;
+}
+.menu img{
     color:var( --text-color1) ;
     cursor: pointer;
-    width: 40px;
+    width: 30px;
+    /* display: none; */
+}
+
+.menu-img{
     display: none;
 }
+
+
 
 /* SECTION DE INÍCIO */
 #inicio{
@@ -141,7 +145,7 @@ body{
     justify-content: center;
     align-items: center;
     background: radial-gradient(white #c7c7c7) */
-    background-color: var( --background2);
+    background-color: var( --background1);
     /* background-color:  #111827; */
     display: flex;
     align-items: center;
@@ -149,6 +153,7 @@ body{
     padding-block: 80px;
     position: relative;
     justify-content: center;
+    scroll-margin-top: 100px;
 }
 #inicio_content{
     display: flex;
@@ -171,6 +176,10 @@ body{
     animation: written 0.5s ease forwards;
 }
 
+.paragrafo_header{
+    color: var(--text-color1);
+}
+
 #social-icons{
     display: flex;
     padding: 20px 0;
@@ -184,7 +193,7 @@ body{
     align-items: center;
     justify-content: center;
     padding: 16px;
-    color: var( --text-color2 );
+    color: var( --text-color1 );
     /* transition: background 0.2s; */
     border-radius: 50%;
     position: relative;
@@ -253,7 +262,7 @@ body{
 .subtitle_black{
     font-size: 2.5rem;
     position: relative;
-    color: var( --text-color2 );
+    color: var( --text-color1 );
     width: fit-content;
     margin: auto;
 }
@@ -312,7 +321,7 @@ body{
 
 /* SECTION DE HABILIDADES */
 #habilities{
-    background-color:var( --background2);
+    background-color:var( --background1);
     justify-content: center;
     padding: 60px 80px;
     text-align: center;
@@ -334,7 +343,8 @@ body{
     border: none;
     margin: 1.5rem;
     font-weight: 600;
-    color: var( --color-third);
+    background-color: var( --color-third );
+    color: var(--text-color1);
     text-decoration: none;
     border: 2px solid var( --color-third);
     cursor: pointer;
@@ -342,8 +352,9 @@ body{
 }
 
 .button_portifolio:hover{
-    border: 2px solid var( --text-color2 );
-    color: var( --text-color2 );
+    border: 2px solid var( --color-third );
+    background-color: var( --text-color1 );
+    color: var(--color-third);
 }
 
 .img_habilities img{
@@ -363,6 +374,8 @@ footer{
     text-align: center;
     padding: 0.7rem;
 }
+
+/* //Media querys */
 
 @media screen  and (max-width: 1200px){
     .image_sobre{
@@ -389,10 +402,32 @@ footer{
     #text_resume h1 {
         font-size: 40px;
     }
+
+    .show-menu nav{
+        display: flex;
+    }
+
+    .nav_bar{
+        position:absolute;
+        background-color: var(--background1);
+        top: 102px;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 95%;
+    }
+
+    .nav_bar li{
+        margin: 0.7rem;     
+    }
+
+    .menu-img{
+        display: block;
+    }
 }
 
 @keyframes written{
     100%{
-        color: var( --text-color2 );
+        color: var( --text-color1 );
     }
 }
