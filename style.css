@@ -168,6 +168,10 @@ body{
     border-color: var( --color-third);
 }
 
+#img_pessoal {
+    order: 2;
+}
+
 #text_resume h1{
     color: transparent;
     padding: 0px 3px;
