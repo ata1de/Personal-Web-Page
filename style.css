@@ -428,6 +428,10 @@ footer{
     .menu-img{
         display: block;
     }
+
+    #img_pessoal{
+        order: inherit;
+    }
 }
 
 @keyframes written{
